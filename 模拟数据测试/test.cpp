@@ -88,6 +88,84 @@ int main()
 			break;
 		}
 
+		//模拟周期变化的网络环境
+		/*last0 = GetTickCount() - end;
+		if (last0 <= 50000)
+		{
+		tp.RecentThroughput = 500000;
+		}
+
+		if (last0 > 50000 && last0 <= 150000)
+		{
+		tp.RecentThroughput = 2000000;
+		}
+
+		if (last0 > 150000 && last0 <= 200000)
+		{
+		tp.RecentThroughput = 4000000;
+		}
+
+		if (last0 > 200000)
+		{
+		break;
+		}*/
+
+
+		//模拟短时间周期变化的网络
+		/*last0 = GetTickCount() - end;
+		if (last0 <= 50000)
+		{
+		tp.RecentThroughput = 500000;
+		}
+
+		if (last0 >= 50000 && last0 <= 200000)
+		{
+		for(int i = 0; i < 15;i++)
+		{
+		if (last0 >= 50000 + 10000 * i&&last0 <= 55000 + 10000 * i)
+		{
+		tp.RecentThroughput = 1000000;
+		break;
+		}
+		else
+		tp.RecentThroughput = 500000;
+		}
+
+		}
+
+		if (last0 > 200000)
+		{
+		break;
+		}*/
+
+
+		//模拟随机的网络变化
+		/*	last0 = GetTickCount() - end;
+		if (last0 <= 50000)
+		{
+		tp.RecentThroughput = (rand() % 201 + 400)*1000;
+		}
+
+		if (last0 >= 50000 && last0 <= 75000)
+		{
+		tp.RecentThroughput = (rand() % 501 + 700) * 1000;
+		}
+
+		if (last0 >= 75000 && last0 <= 120000)
+		{
+		tp.RecentThroughput = (rand() % 100 + 200) * 1000;
+		}
+
+		if (last0 >= 120000 && last0 <= 200000)
+		{
+		tp.RecentThroughput = (rand() % 301 + 500) * 1000;
+		}
+
+		if (last0 > 200000)
+		{
+		break;
+		}*/
+
 		//模拟buffer的情况,单位是s
 		if (start1 - last1 >= 500)
 		{
